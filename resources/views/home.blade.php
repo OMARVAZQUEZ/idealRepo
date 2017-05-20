@@ -24,8 +24,8 @@
                                 </div>
                                 <div  class="form-group col-md-3">
               
-                 {!!Form::label('Servicio', 'Servicio', null)!!}
-                 {!!Form::select('Servicio',
+                 		{!!Form::label('Servicio', 'Servicio', null)!!}
+                 			{!!Form::select('Servicio',
                  			 array(
                                         'Doble Play'=>'Doble Play',
                                         'Activacion'=>'Activacion',
@@ -36,9 +36,7 @@
                                      {!!Form::label('Contrato', 'Contrato', null)!!}                          
                                      {!!Form::select('Contrato', array(
                                                      'Linea Nueva'=>'Linea Nueva','Portabilidad'=>'Portabilidad'),null,['id'=>'Contrato','class'=>'form-control '])!!}
-                                          @if(isset($errors))
-                                             {{$errors->first('Actividad')}}
-                                          @endif
+                                          
                                
                              </div>
                                 <button class="btn" type="submit">Enviar.</button>
