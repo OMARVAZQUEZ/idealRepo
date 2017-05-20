@@ -13,30 +13,81 @@
                             {{ csrf_field() }}
                             <div class="row">
                                 <div class="lg-3">
-                                    <label for="">Archivo 1</label>
+                                    <label for="">IFE</label>
                                     <input type="file" class="form-control" name="IFE" id="IFE">
+                                </div>
+                                <div class="lg-3">
+                                    <label for="">IFE REVERSO</label>
+                                    <input type="file" class="form-control" name="IFEREVERSO" id="IFEREVERSO">
                                 </div>
                                 <div class=" lg-3">
                                     <div class="form-group">
-                                        <label for="">Archivo 2</label>
+                                        <label for="">CURP</label>
                                         <input type="file" class="form-control" name="CURP" id="CURP">
                                     </div>
                                 </div>
-                                <div  class="form-group col-md-3">
+                                 <div class=" lg-3">
+                                    <div class="form-group">
+                                        <label for="">COMPROBANTE DE DOMICILIO</label>
+                                        <input type="file" class="form-control" name="COMPROBANTE" id="COMPROBANTE">
+                                    </div>
+                                </div>
+                                <div class=" lg-3">
+                                    <div class="form-group">
+                                        <label for="">SOLICITUD</label>
+                                        <input type="file" class="form-control" name="SOLICITUD" id="SOLICITUD">
+                                    </div>
+                                </div>
+                                <div class=" lg-3">
+                                    <div class="form-group">
+                                        <label for="">AVISO</label>
+                                        <input type="file" class="form-control" name="AVISO" id="AVISO">
+                                    </div>
+                                </div>
+                                
                               
                               
                               <div class=" lg-3">
                                     <div class="form-group">
-                                          <select class="selectpicker">
+                                     <label for="">Tipo de servicio</label>
+                                          <select class="form-control">
                                                   <option value="DoblePlay">Doble Play</option>
                                                   <option value="Activacion">Activacion</option>
                                                   <option value="Upsel">Upsel</option>
                                          </select>
                                      </div>
                                </div>
+                                <div class=" lg-3">
+                                    <div class="form-group">
+                                     <label for="">Contrato</label>
+                                          <select class="form-control">
+                                                  <option value="Linea Nueva">Linea Nueva</option>
+                                                  <option value="Portabilidad">Portabilidad</option>
+                                                  
+                                         </select>
+                                     </div>
+                               </div>
+                                <div class=" lg-3">
+                                    <div class="form-group">
+                                     <label for="">Tipo de Linea</label>
+                                          <select class="form-control">
+                                                  <option value="Comercial">Comercial</option>
+                                                  <option value="Residencial">Residencial</option>
+                                                  
+                                         </select>
+                                     </div>
+                               </div>
+                               <div class=" lg-3">
+                                    <div class="form-group">
+                                     <label for="">Paquetes</label>
+                                          <select class="form-control">
+                                         </select>
+                                     </div>
+                               </div>
+                               
               
                  		
-                                <button class="btn" type="submit">Enviar.</button>
+                                <button class="btn" type="submit">Enviar</button>
                             </div>
                         </form>
                     </div>
