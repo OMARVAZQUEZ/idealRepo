@@ -42,7 +42,6 @@ class FilesUploadController extends Controller
     public function store(Request $request)
     {
         
-        dd($request);
         
         $this->procesarArchivos('IFE',$request);
         $this->procesarArchivos('CURP',$request);
@@ -51,7 +50,7 @@ class FilesUploadController extends Controller
         $this->procesarArchivos('COMPROBANTE',$request);
         $this->procesarArchivos('SOLICITUD',$request);
         $this->procesarArchivos('AVISO',$request);
-        
+        $name = $request->input('name');
         return redirect('filesUpload');
     }
 
