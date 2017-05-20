@@ -23,22 +23,19 @@
                                     </div>
                                 </div>
                                 <div  class="form-group col-md-3">
+                              
+                              
+                              <div class=" lg-3">
+                                    <div class="form-group">
+                                          <select class="selectpicker">
+                                                  <option value="DoblePlay">Doble Play</option>
+                                                  <option value="Activacion">Activacion</option>
+                                                  <option value="Upsel">Upsel</option>
+                                         </select>
+                                     </div>
+                               </div>
               
-                 		{!!Form::label('Servicio', 'Servicio', null)!!}
-                 			{!!Form::select('Servicio',
-                 			 array(
-                                        'Doble Play'=>'Doble Play',
-                                        'Activacion'=>'Activacion',
-                                        'Upsel'=>'Upsel',
-                                        'Dish'=>'Dish'),null,['id'=>'Servicio','class'=>'form-control '])!!}
-
-                             <div  class="form-group col-md-3">
-                                     {!!Form::label('Contrato', 'Contrato', null)!!}                          
-                                     {!!Form::select('Contrato', array(
-                                                     'Linea Nueva'=>'Linea Nueva','Portabilidad'=>'Portabilidad'),null,['id'=>'Contrato','class'=>'form-control '])!!}
-                                          
-                               
-                             </div>
+                 		
                                 <button class="btn" type="submit">Enviar.</button>
                             </div>
                         </form>
