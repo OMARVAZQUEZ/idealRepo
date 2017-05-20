@@ -81,6 +81,8 @@
                                     <div class="form-group">
                                      <label for="">Paquetes</label>
                                           <select class="form-control">
+                                            <option value="Comercial">Basico</option>
+                                                  <option value="Residencial">Completo</option>
                                          </select>
                                      </div>
                                </div>
