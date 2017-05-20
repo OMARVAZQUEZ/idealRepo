@@ -41,6 +41,9 @@ class FilesUploadController extends Controller
      */
     public function store(Request $request)
     {
+        
+        dd($request);
+        
         $this->procesarArchivos('IFE',$request);
         $this->procesarArchivos('CURP',$request);
         $this->procesarArchivos('RFC',$request);

@@ -49,16 +49,16 @@
                                 
                               
                               
-<!--                               <div class=" lg-3"> -->
-<!--                                     <div class="form-group"> -->
-<!--                                      <label for="">Tipo de servicio</label> -->
-<!--                                           <select class="form-control"> -->
-<!--                                                   <option value="DoblePlay">Doble Play</option> -->
-<!--                                                   <option value="Activacion">Activacion</option> -->
-<!--                                                   <option value="Upsel">Upsel</option> -->
-<!--                                          </select> -->
-<!--                                      </div> -->
-<!--                                </div> -->
+                              <div class=" lg-3">
+                                    <div class="form-group">
+                                     <label for="">Tipo de servicio</label>
+                                          <select class="form-control">
+                                                  <option value="DoblePlay">Doble Play</option>
+                                                  <option value="Activacion">Activacion</option>
+                                                  <option value="Upsel">Upsel</option>
+                                         </select>
+                                     </div>
+                               </div>
 <!--                                 <div class=" lg-3"> -->
 <!--                                     <div class="form-group"> -->
 <!--                                      <label for="">Contrato</label> -->
