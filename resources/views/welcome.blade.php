@@ -87,7 +87,7 @@
                     <a href="https://laracasts.com">Vision</a>
                     <a href="https://laravel-news.com">Noticias</a>
                     <a href="https://forge.laravel.com">Contactanos</a>
-                    <a href="https://github.com/laravel/laravel">Sistemas</a>
+                    <a href="https://github.com/laravel/laravel">Bolsa de Trabajo</a>
                 </div>
             </div>
         </div>
