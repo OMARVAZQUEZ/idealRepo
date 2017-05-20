@@ -12,6 +12,7 @@
                         <form action="{{ url('filesUpload') }}" method="POST" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="row">
+                            <div class="lg-12">
                                 <div class="lg-3">
                                     <label for="">IFE</label>
                                     <input type="file" class="form-control" name="IFE" id="IFE">
@@ -32,6 +33,7 @@
                                         <input type="file" class="form-control" name="COMPROBANTE" id="COMPROBANTE">
                                     </div>
                                 </div>
+                                
                                 <div class=" lg-3">
                                     <div class="form-group">
                                         <label for="">SOLICITUD</label>
@@ -90,6 +92,7 @@
               
                  		
                                 <button class="btn" type="submit">Enviar</button>
+                            </div>
                             </div>
                         </form>
                     </div>
