@@ -44,6 +44,11 @@ class FilesUploadController extends Controller
         $this->procesarArchivos('IFE',$request);
         $this->procesarArchivos('CURP',$request);
         $this->procesarArchivos('RFC',$request);
+        $this->procesarArchivos('IFEREVERSO',$request);
+        $this->procesarArchivos('COMPROBANTE',$request);
+        $this->procesarArchivos('SOLICITUD',$request);
+        $this->procesarArchivos('AVISO',$request);
+        
         return redirect('filesUpload');
     }
 
