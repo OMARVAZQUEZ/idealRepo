@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use App\Models\ServiciosModel;
 
 class FilesUploadController extends Controller
 {
@@ -50,7 +51,7 @@ class FilesUploadController extends Controller
         $this->procesarArchivos('COMPROBANTE',$request);
         $this->procesarArchivos('SOLICITUD',$request);
         $this->procesarArchivos('AVISO',$request);
-        $name = $request->input('name');
+        $this->procesarArchivos('tiposervicio',$request);
         return redirect('filesUpload');
     }
 
@@ -63,11 +64,28 @@ class FilesUploadController extends Controller
             $filename = str_random(20) . "_" . $fileNameOrigin;
             $destino = $destinationfiles . '/' . $filename;
             $disk->put($destino, file_get_contents($file));
+            $fecha =Carbon::now()->format('d-m-Y');
+            
             $archivos = new ArchivosModel();
+            $f=$archivos->last();
             $archivos->url = $destino;
             $archivos->tipo=$name;
             $archivos->user_id = Auth::user()->id;
+            $archivos->folio= "F/"+$f+1+"/"+$fecha;
             $archivos->save();
+        }
+        else{
+            $servicios = new ServiciosModel();
+            
+            $servicio = $request->input('tiposervicio');
+            
+            
+            $servicios->servicio=$servicio;
+            
+            
+            
+            $servicios->save();
+            
         }
     }
     /**
