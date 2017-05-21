@@ -6,6 +6,7 @@ use App\Models\ArchivosModel;
 use App\Models\ServiciosModel;
 use App\User;
 use App\Models;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;

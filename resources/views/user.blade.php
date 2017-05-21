@@ -21,16 +21,20 @@
                             <tbody>
                             @foreach($user->archivos as $item)
                                 <tr>
-
-                                    <td>
-                                        {{$item->folio}}
-                                    </td>
                                     <td>
                                         {{$item->tipo}}
                                     </td>
                                     <td>
                                         <a href="{{$item->url}}"> <i class=" fa fa-download"> Descargar</i>
                                         </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                             @foreach($user->servicios as $item)
+                                <tr>
+
+                                    <td>
+                                        {{$item->folio}}
                                     </td>
                                     <td>
                                         {{$item->created_at}}
@@ -40,6 +44,7 @@
                                     </td>
                                 </tr>
                             @endforeach
+                            
                             </tbody>
                         </table>
                     </div>
