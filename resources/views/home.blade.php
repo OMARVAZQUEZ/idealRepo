@@ -89,19 +89,40 @@
                                      </div>
                                </div>
                                 
-                                <select class="js-example-basic-single">
-                                  <option value="AL">Alabama</option>
-                                     <option value="Basico">Basico</option>
-                                  <option value="WY">Wyoming</option>
-                                  <option value="Completo">Completo</option>
-                                </select>
-                               <script type="text/javascript">
-                        $(document).ready(function() {
-                          $(".js-example-basic-single").select2();
-                        });
-                        </script>
-                               
-              
+                               <select>
+                               <div class="col-md-6">
+                                    <div class="form-group">
+                               		 <label for="">Paquetes</label>
+                                      <optgroup label="RESIDENCIAL">
+                                        <option value="CAMBIO DE DOMICILIO">CAMBIO DE DOMICILIO</option>
+                                          <option value="INFINITUM 10MB">INFINITUM 10MB(S/INTERNET)</option>
+                                          <option value="INFINITUM 20MB">INFINITUM 20MB(S/INTERNET)</option>
+                                          <option value="INFINITUM 50MB">INFINITUM 50MB(S/INTERNET)</option>
+                                          <option value="INFINITUM 100MB">INFINITUM 100MB(S/INTERNET)</option>
+                                          
+                                           <option value="LINEA SIN PAQUETE">LINEA SIN PAQUETE</option>
+                                           <option value="PAQUETE $389">PAQUETE $389</option>
+                                           <option value="PAQUETE $1499">PAQUETE $1499</option>
+                                           <option value="PAQUETE $333">PAQUETE $333</option>
+                                           <option value="PAQUETE $599">PAQUETE $599</option>
+                                           <option value="PAQUETE $999">PAQUETE $999</option>
+                                                
+                                      </optgroup>
+                                      <optgroup label="COMERCIAL">
+                                       <option value="CAMBIO DE DOMICILIO">CAMBIO DE DOMICILIO</option>
+                                        <option value="LINEA SIN PAQUETE">LINEA SIN PAQUETE</option>
+                                        <option value="LINEA SIN PAQUETE">LINEA SIN PAQUETE</option>
+                                           <option value="PAQUETE NEGOCIO $1499">PAQUETE NEGOCIO $1499</option>
+                                           <option value="PAQUETE NEGOCIO $1789">PAQUETE NEGOCIO $1789</option>
+                                           <option value="PAQUETE NEGOCIO $2289">PAQUETE NEGOCIO $2289</option>
+                                           <option value="PAQUETE NEGOCIO $399">PAQUETE  NEGOCIO $399</option>
+                                           <option value="PAQUETE NEGOCIO $549">PAQUETE  NEGOCIO $549</option>
+                                           <option value="PAQUETE NEGOCIO  $999">PAQUETE NEGOCIO $999</option>
+                                           
+                                      </optgroup>
+                                    </select>    
+             					  </div>
+                              </div>
                  		
                                 <button class="btn" type="submit">Enviar</button>
                             
