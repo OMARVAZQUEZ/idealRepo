@@ -20,7 +20,7 @@
                             </thead>
                             <tbody>
                            
-                             @foreach($user->servicios as $item)
+                             @foreach($data  as $item)
                                 <tr>
     								<td>
                                         {{$item->tipo}}
