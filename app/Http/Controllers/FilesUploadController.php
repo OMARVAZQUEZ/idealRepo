@@ -86,7 +86,7 @@ class FilesUploadController extends Controller
         $servicios = new ServiciosModel();
         $last=ServiciosModel::all()->last()->id;
         $folio =$last+1;
-        
+        $fecha =Carbon::now()->format('d');
         
         
         $servicio = $request->input('tiposervicio');
