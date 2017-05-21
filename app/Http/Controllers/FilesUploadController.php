@@ -82,7 +82,7 @@ class FilesUploadController extends Controller
     public function servicioDatos($name,$request){
         $servicios = new ServiciosModel();
         $servicio = $request->input('tiposervicio');
-        dd($servicios);
+        
         $servicios->servicio=$servicio;
   
         $servicios->save();
