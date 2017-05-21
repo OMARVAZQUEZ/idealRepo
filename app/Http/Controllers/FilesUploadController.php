@@ -29,7 +29,8 @@ class FilesUploadController extends Controller
         
         //$user=User::where('id',Auth::user()->id)->with(['archivos'])->first();
         $data['user']=$user;
-        return view('user',$data);
+        $urls="https://s3.amazonaws.com/".env('AWS_BUCKET')."/";
+        return view('user',$data,$urls);
     }
 
     /**
