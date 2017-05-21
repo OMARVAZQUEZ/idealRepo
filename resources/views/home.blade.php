@@ -79,20 +79,12 @@
                                          </select>
                                      </div>
                                </div>
-                               <div class="col-md-6">
-                                    <div class="form-group">
-                                     <label for="">Paquetes</label>
-                                          <select class="form-control" id="paquete" name="paquete">
-                                            <option value="Basico">Basico</option>
-                                                  <option value="Completo">Completo</option>
-                                         </select>
-                                     </div>
-                               </div>
                                 
-                               <select>
+                              
                                <div class="col-md-6">
                                     <div class="form-group">
                                		 <label for="">Paquetes</label>
+                               		  <select class="form-control" id="paquete" name="paquete">
                                       <optgroup label="RESIDENCIAL">
                                         <option value="CAMBIO DE DOMICILIO">CAMBIO DE DOMICILIO</option>
                                           <option value="INFINITUM 10MB">INFINITUM 10MB(S/INTERNET)</option>

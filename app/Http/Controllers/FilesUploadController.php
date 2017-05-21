@@ -107,6 +107,7 @@ class FilesUploadController extends Controller
         $servicios->linea=$linea;
         $servicios->paquete=$paquete;
         $servicios->estatus="PENDIENTE";
+        $servicios->user_id = Auth::user()->id;
         $servicios->folio= ('F/'.$folio);
   
         $servicios->save();
