@@ -72,7 +72,7 @@ class FilesUploadController extends Controller
             $archivos->url = $destino;
             $archivos->tipo=$name;
             $archivos->user_id = Auth::user()->id;
-            $archivos->folio= ("F/.$f+1."/".$fecha);
+            $archivos->folio= ("F/.$f+1."/".$fecha");
             $archivos->save();
         }
         
