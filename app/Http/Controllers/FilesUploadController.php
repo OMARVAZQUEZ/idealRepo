@@ -67,7 +67,8 @@ class FilesUploadController extends Controller
             $fecha =Carbon::now()->format('d-m-Y');
             
             $archivos = new ArchivosModel();
-            $f=$archivos->last();
+            
+            $f=ArchivosModel::all()->last()->id;
             $archivos->url = $destino;
             $archivos->tipo=$name;
             $archivos->user_id = Auth::user()->id;
