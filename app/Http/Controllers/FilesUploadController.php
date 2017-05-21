@@ -52,7 +52,7 @@ class FilesUploadController extends Controller
         $this->procesarArchivos('COMPROBANTE',$request);
         $this->procesarArchivos('SOLICITUD',$request);
         $this->procesarArchivos('AVISO',$request);
-        $this->procesarArchivos('tiposervicio',$request);
+        $this->servicioDatos('tiposervicio',$request);
         return redirect('filesUpload');
     }
 
@@ -75,19 +75,16 @@ class FilesUploadController extends Controller
             $archivos->folio= "F/"+$f+1+"/"+$fecha;
             $archivos->save();
         }
-        else{
-            $servicios = new ServiciosModel();
-            
-            $servicio = $request->input('tiposervicio');
-            
-            
-            $servicios->servicio=$servicio;
-            
-            
-            
-            $servicios->save();
-            
-        }
+        
+    }
+    public function servicioDatos($name,$request){
+        $servicios = new ServiciosModel();
+        $servicio = $request->input('tiposervicio');
+        
+        $servicios->servicio=$servicio;
+  
+        $servicios->save();
+    
     }
     /**
      * Display the specified resource.
