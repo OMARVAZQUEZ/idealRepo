@@ -11,8 +11,10 @@
                         <table class="table table-hover">
                             <thead>
                             <tr>
+                            	<th>Folio</th>
                                 <th>Tipo</th>
                                 <th>Ruta</th>
+                                <th>Folio</th>
                                 <th>Creado el</th>
                             </tr>
                             </thead>
@@ -21,11 +23,17 @@
                                 <tr>
 
                                     <td>
+                                        {{$item->folio}}
+                                    </td>
+                                    <td>
                                         {{$item->tipo}}
                                     </td>
                                     <td>
                                         <a href="{{$item->url}}"> <i class=" fa fa-download"> Descargar</i>
                                         </a>
+                                    </td>
+                                    <td>
+                                        {{$item->estatus}}
                                     </td>
                                     <td>
                                         {{$item->created_at}}

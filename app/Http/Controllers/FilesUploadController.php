@@ -100,7 +100,6 @@ class FilesUploadController extends Controller
         $servicios->linea=$linea;
         $servicios->paquete=$paquete;
         $servicios->estatus="PENDIENTE";
-        
         $servicios->folio= ('F/'.$folio.'/'.$fecha);
   
         $servicios->save();
