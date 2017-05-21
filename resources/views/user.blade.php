@@ -11,9 +11,10 @@
                         <table class="table table-hover">
                             <thead>
                             <tr>
-                            	<th>Folio</th>
+                            	
                                 <th>Tipo</th>
                                 <th>Ruta</th>
+                                <th>Folio</th>
                                 <th>Creado el</th>
                                 <th>Estatus</th>
                             </tr>

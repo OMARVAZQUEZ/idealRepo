@@ -83,11 +83,23 @@
                                     <div class="form-group">
                                      <label for="">Paquetes</label>
                                           <select class="form-control" id="paquete" name="paquete">
-                                            <option value="Comercial">Basico</option>
-                                                  <option value="Residencial">Completo</option>
+                                            <option value="Basico">Basico</option>
+                                                  <option value="Completo">Completo</option>
                                          </select>
                                      </div>
                                </div>
+                                
+                                <select class="js-example-basic-single">
+                                  <option value="AL">Alabama</option>
+                                     <option value="Basico">Basico</option>
+                                  <option value="WY">Wyoming</option>
+                                  <option value="Completo">Completo</option>
+                                </select>
+                               <script type="text/javascript">
+                        $(document).ready(function() {
+                          $(".js-example-basic-single").select2();
+                        });
+                        </script>
                                
               
                  		
