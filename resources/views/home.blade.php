@@ -49,7 +49,7 @@
                                 
                               
                               
-                              <div class=" lg-3">
+                              <div class="col-md-6">
                                     <div class="form-group">
                                      <label for="">Tipo de servicio</label>
                                           <select class="form-control" id="tiposervicio" name="tiposervicio">
@@ -59,7 +59,7 @@
                                          </select>
                                      </div>
                                </div>
-                                <div class=" lg-3">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                      <label for="">Contrato</label>
                                           <select class="form-control" id="contrato" name="contrato">
@@ -69,7 +69,7 @@
                                          </select>
                                      </div>
                                </div>
-                                <div class=" lg-3">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                      <label for="">Tipo de Linea</label>
                                           <select class="form-control" id="linea" name="linea">
@@ -79,7 +79,7 @@
                                          </select>
                                      </div>
                                </div>
-                               <div class=" lg-3">
+                               <div class="col-md-6">
                                     <div class="form-group">
                                      <label for="">Paquetes</label>
                                           <select class="form-control" id="paquete" name="paquete">
