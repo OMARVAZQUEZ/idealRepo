@@ -52,7 +52,7 @@
                               <div class=" lg-3">
                                     <div class="form-group">
                                      <label for="">Tipo de servicio</label>
-                                          <select class="form-control" id="tiposervicio">
+                                          <select class="form-control" id="tiposervicio" name="tiposervicio">
                                                   <option value="DoblePlay">Doble Play</option>
                                                   <option value="Activacion">Activacion</option>
                                                   <option value="Upsel">Upsel</option>

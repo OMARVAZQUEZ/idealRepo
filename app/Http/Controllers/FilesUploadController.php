@@ -65,11 +65,14 @@ class FilesUploadController extends Controller
             $filename = str_random(20) . "_" . $fileNameOrigin;
             $destino = $destinationfiles . '/' . $filename;
             $disk->put($destino, file_get_contents($file));
-            $fecha =Carbon::now()->format('d-m-Y');
-            
+            $fecha =Carbon::now()->format('d');
+            //models
             $archivos = new ArchivosModel();
+            $servicios = new ServiciosModel();
             
-            $last=ArchivosModel::all()->last()->id;
+            //guardar datos
+            
+            $last=ServiciosModel::all()->last()->id;
             $folio =$last+1;
             $archivos->url = $destino;
             $archivos->tipo=$name;
@@ -81,9 +84,15 @@ class FilesUploadController extends Controller
     }
     public function servicioDatos($name,$request){
         $servicios = new ServiciosModel();
+        $last=ServiciosModel::all()->last()->id;
+        $folio =$last+1;
+        
+        
+        
         $servicio = $request->input('tiposervicio');
         
         $servicios->servicio=$servicio;
+        $servicios->folio= ('F/'.$folio.'/'.$fecha);
   
         $servicios->save();
     
