@@ -20,7 +20,13 @@ class FilesUploadController extends Controller
      */
     public function index()
     {
-        $user=User::where('id',Auth::user()->id)->with(['archivos'])->first();
+        
+        $user = DB::table('servicios')
+        ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
+        ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
+        ->get();
+        
+        //$user=User::where('id',Auth::user()->id)->with(['archivos'])->first();
         $data['user']=$user;
         return view('user',$data);
     }
@@ -77,7 +83,7 @@ class FilesUploadController extends Controller
             $archivos->url = $destino;
             $archivos->tipo=$name;
             $archivos->user_id = Auth::user()->id;
-            $archivos->folio= ('F/'.$folio.'/'.$fecha);
+            $archivos->folio= ('F/'.$folio);
             $archivos->save();
         }
         
@@ -100,7 +106,7 @@ class FilesUploadController extends Controller
         $servicios->linea=$linea;
         $servicios->paquete=$paquete;
         $servicios->estatus="PENDIENTE";
-        $servicios->folio= ('F/'.$folio.'/'.$fecha);
+        $servicios->folio= ('F/'.$folio);
   
         $servicios->save();
     

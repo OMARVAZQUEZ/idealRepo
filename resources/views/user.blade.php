@@ -14,8 +14,8 @@
                             	<th>Folio</th>
                                 <th>Tipo</th>
                                 <th>Ruta</th>
-                                <th>Folio</th>
                                 <th>Creado el</th>
+                                <th>Estatus</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -33,10 +33,10 @@
                                         </a>
                                     </td>
                                     <td>
-                                        {{$item->estatus}}
+                                        {{$item->created_at}}
                                     </td>
                                     <td>
-                                        {{$item->created_at}}
+                                        {{$item->estatus}}
                                     </td>
                                 </tr>
                             @endforeach
