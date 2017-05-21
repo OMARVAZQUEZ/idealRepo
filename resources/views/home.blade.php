@@ -59,35 +59,35 @@
                                          </select>
                                      </div>
                                </div>
-<!--                                 <div class=" lg-3"> -->
-<!--                                     <div class="form-group"> -->
-<!--                                      <label for="">Contrato</label> -->
-<!--                                           <select class="form-control"> -->
-<!--                                                   <option value="Linea Nueva">Linea Nueva</option> -->
-<!--                                                   <option value="Portabilidad">Portabilidad</option> -->
+                                <div class=" lg-3">
+                                    <div class="form-group">
+                                     <label for="">Contrato</label>
+                                          <select class="form-control" id="contrato" name="contrato">
+                                                  <option value="Linea Nueva">Linea Nueva</option>
+                                                  <option value="Portabilidad">Portabilidad</option>
                                                   
-<!--                                          </select> -->
-<!--                                      </div> -->
-<!--                                </div> -->
-<!--                                 <div class=" lg-3"> -->
-<!--                                     <div class="form-group"> -->
-<!--                                      <label for="">Tipo de Linea</label> -->
-<!--                                           <select class="form-control"> -->
-<!--                                                   <option value="Comercial">Comercial</option> -->
-<!--                                                   <option value="Residencial">Residencial</option> -->
+                                         </select>
+                                     </div>
+                               </div>
+                                <div class=" lg-3">
+                                    <div class="form-group">
+                                     <label for="">Tipo de Linea</label>
+                                          <select class="form-control" id="linea" name="linea">
+                                                  <option value="Comercial">Comercial</option>
+                                                  <option value="Residencial">Residencial</option>
                                                   
-<!--                                          </select> -->
-<!--                                      </div> -->
-<!--                                </div> -->
-<!--                                <div class=" lg-3"> -->
-<!--                                     <div class="form-group"> -->
-<!--                                      <label for="">Paquetes</label> -->
-<!--                                           <select class="form-control"> -->
-<!--                                             <option value="Comercial">Basico</option> -->
-<!--                                                   <option value="Residencial">Completo</option> -->
-<!--                                          </select> -->
-<!--                                      </div> -->
-<!--                                </div> -->
+                                         </select>
+                                     </div>
+                               </div>
+                               <div class=" lg-3">
+                                    <div class="form-group">
+                                     <label for="">Paquetes</label>
+                                          <select class="form-control" id="paquete" name="paquete">
+                                            <option value="Comercial">Basico</option>
+                                                  <option value="Residencial">Completo</option>
+                                         </select>
+                                     </div>
+                               </div>
                                
               
                  		

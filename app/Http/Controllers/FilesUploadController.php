@@ -90,8 +90,17 @@ class FilesUploadController extends Controller
         
         
         $servicio = $request->input('tiposervicio');
+        $contrato = $request->input('contrato');
+        $linea = $request->input('linea');
+        $paquete = $request->input('paquete');
+        
         
         $servicios->servicio=$servicio;
+        $servicios->contrato=$contrato;
+        $servicios->linea=$linea;
+        $servicios->paquete=$paquete;
+        $servicios->estatus="PENDIENTE";
+        
         $servicios->folio= ('F/'.$folio.'/'.$fecha);
   
         $servicios->save();
