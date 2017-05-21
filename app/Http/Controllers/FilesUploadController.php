@@ -68,11 +68,12 @@ class FilesUploadController extends Controller
             
             $archivos = new ArchivosModel();
             
-            $f=ArchivosModel::all()->last()->id;
+            $last=ArchivosModel::all()->last()->id;
+            $folio =$last+1;
             $archivos->url = $destino;
             $archivos->tipo=$name;
             $archivos->user_id = Auth::user()->id;
-            $archivos->folio= ("F/.$f+1."/".$fecha");
+            $archivos->folio= ('F/'.$folio.'/'.$fecha);
             $archivos->save();
         }
         
