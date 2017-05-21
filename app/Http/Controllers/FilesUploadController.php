@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\ArchivosModel;
+use App\Models\ServiciosModel;
 use App\User;
+use App\Models;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use App\Models\ServiciosModel;
+
 use Carbon\Carbon;
 class FilesUploadController extends Controller
 {
@@ -18,7 +20,6 @@ class FilesUploadController extends Controller
      */
     public function index()
     {
-
         $user=User::where('id',Auth::user()->id)->with(['archivos'])->first();
         $data['user']=$user;
         return view('user',$data);
@@ -81,7 +82,7 @@ class FilesUploadController extends Controller
     public function servicioDatos($name,$request){
         $servicios = new ServiciosModel();
         $servicio = $request->input('tiposervicio');
-        
+        dd($servicios);
         $servicios->servicio=$servicio;
   
         $servicios->save();
