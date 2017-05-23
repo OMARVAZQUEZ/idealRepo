@@ -10,8 +10,8 @@ use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-
 use Carbon\Carbon;
+
 class FilesUploadController extends Controller
 {
     /**
@@ -30,7 +30,8 @@ class FilesUploadController extends Controller
         //$user=User::where('id',Auth::user()->id)->with(['archivos'])->first();
         $data['user']=$user;
         $urls="https://s3.amazonaws.com/".env('AWS_BUCKET')."/";
-        return view('user',$data);
+        //return view('user',$data);
+        return view('user')->with('data', $data)->with('url', $urls);
     }
 
     /**
