@@ -39,10 +39,9 @@ class HomeController extends Controller
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
         ->get();
-        
-       
         $data['user']=$user;
         $urls="https://s3.amazonaws.com/".env('AWS_BUCKET')."/";
         return view('solicitudes')->with('data', $data)->with('url', $urls);
+        
     }
 }
