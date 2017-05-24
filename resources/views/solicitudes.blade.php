@@ -11,12 +11,11 @@
                         <table class="table table-hover">
                             <thead>
                             <tr>
-                            	
-                                <th>Tipo</th>
-                                <th>Ruta</th>
-                                <th>Folio</th>
-                                <th>Creado el</th>
-                                <th>Estatus</th>
+                            	<th>Servicio</th>
+                            	<th>Contrato</th>
+                            	<th>Paquete</th>
+                            	<th>Folio</th>
+                            	<th>Estatus</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -24,21 +23,24 @@
                              @foreach($data  as $item)
                                 <tr>
     								<td>
-                                        {{$item->tipo}}
+                                        {{$item->servicio}}
                                     </td>
-                                    <td>
-                                        <a href="{{$url}}{{$item->url}}"> <i class=" fa fa-download"> Descargar</i>
-                                        </a>
-                                    </td>
+<!--                                     <td> -->
+<!--                                         <a href="{{$url}}{{$item->url}}"> <i class=" fa fa-download"> Descargar</i> -->
+<!--                                         </a> -->
+<!--                                     </td> -->
 								
                                     <td>
-                                        {{$item->folio}}
+                                        {{$item->contrato}}
                                     </td>
                                     <td>
-                                        {{$item->created_at}}
+                                        {{$item->paquete}}
                                     </td>
                                     <td>
                                         {{$item->estatus}}
+                                    </td>
+                                    <td>
+                                        {{$item->folio}}
                                     </td>
                                 </tr>
                             @endforeach
