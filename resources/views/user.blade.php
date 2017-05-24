@@ -21,13 +21,13 @@
                             </thead>
                             <tbody>
                            
-                             @foreach($user  as $item)
+                             @foreach($data  as $item)
                                 <tr>
     								<td>
                                         {{$item->tipo}}
                                     </td>
                                     <td>
-                                        <a href="{{$item->url}}"> <i class=" fa fa-download"> Descargar</i>
+                                        <a href="{{$url}}{{$item->url}}"> <i class=" fa fa-download"> Descargar</i>
                                         </a>
                                     </td>
 								
