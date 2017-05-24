@@ -13,6 +13,7 @@
                             <tr>
                             	<th>Servicio</th>
                             	<th>Contrato</th>
+                            	<th>Linea</th>
                             	<th>Paquete</th>
                             	<th>Folio</th>
                             	<th>Estatus</th>
@@ -23,7 +24,7 @@
                              @foreach($data  as $item)
                                 <tr>
     								<td>
-                                        {{$item->servicio}}
+                                     {{$item->servicio}}
                                     </td>
 <!--                                     <td> -->
 <!--                                         <a href="{{$url}}{{$item->url}}"> <i class=" fa fa-download"> Descargar</i> -->
@@ -31,17 +32,29 @@
 <!--                                     </td> -->
 								
                                     <td>
-                                        {{$item->contrato}}
+                                      {{$item->contrato}}
                                     </td>
                                     <td>
-                                        {{$item->paquete}}
+                                      {{$item->linea}}
                                     </td>
                                     <td>
-                                        {{$item->estatus}}
+                                      {{$item->paquete}}
                                     </td>
                                     <td>
-                                        {{$item->folio}}
+                                     {{$item->folio}}
                                     </td>
+                                    <td>
+                                     {{$item->estatus}}
+                                    </td>
+                                    <td>
+                                      <form name="activar" method="ACTIVAR" action="activar">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="id" value="{{ $item->id }}">
+                                      <button type="submit">Activar</button>
+                                      </form>
+                                    </td>
+                                    
+                                    
                                 </tr>
                             @endforeach
                             
