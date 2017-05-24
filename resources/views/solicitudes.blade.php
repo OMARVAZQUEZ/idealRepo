@@ -21,7 +21,7 @@
                             </thead>
                             <tbody>
                            
-                             @foreach($user  as $item)
+                             @foreach($data  as $item)
                                 <tr>
     								<td>
                                         {{$item->tipo}}
