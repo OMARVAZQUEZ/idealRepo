@@ -44,4 +44,10 @@ class HomeController extends Controller
         return view('solicitudes')->with('data', $data)->with('url', $url);
         
     }
+    public function update(request $request)
+    {
+        dd($request->all());
+        return view('solicitudes')->with('data', $data)->with('url', $url);
+    
+    }
 }

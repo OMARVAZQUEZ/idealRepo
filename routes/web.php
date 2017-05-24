@@ -21,6 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('filesUpload','FilesUploadController');
 
-
-
 Route::get('solicitudes', 'HomeController@solicitudes');
+
+Route::post('update/{id}','HomeController@update') ;
