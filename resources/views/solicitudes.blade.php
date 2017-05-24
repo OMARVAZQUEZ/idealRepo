@@ -47,7 +47,7 @@
                                      {{$item->estatus}}
                                     </td>
                                     <td>
-                                      <form name="activar" method="POST" action="update">
+                                      <form  method="POST" action="{{url('update')}}">
                                         {{ csrf_field() }}
                                         <input type="hidden" name="id" value="{{ $item->id }}">
                                       <button type="submit">Activar</button>

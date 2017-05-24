@@ -23,4 +23,4 @@ Route::resource('filesUpload','FilesUploadController');
 
 Route::get('solicitudes', 'HomeController@solicitudes');
 
-Route::post('update/{id}','HomeController@update') ;
+Route::post('update','HomeController@update') ;
