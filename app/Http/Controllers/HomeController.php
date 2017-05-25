@@ -51,13 +51,13 @@ class HomeController extends Controller
         //$flight = App\ServiciosModel::find(1);
        
         $id = $request->id;
-        dd( $id );
+       
         
         $servicios = new ServiciosModel();
       $affectedRows = ServiciosModel::where('id', '=', $id)->update(array('estatus' => "AUTORIZADA"));
            
      
-       Flash::success("Se ha registrado el usuario de manera exitosa!");
+       Flash::success("Se ha registrado la solicitud de manera exitosa!");
         
         
 //         $user = DB::table('servicios') ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
