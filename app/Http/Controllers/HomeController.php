@@ -35,10 +35,12 @@ class HomeController extends Controller
     }
     public function solicitudes()
     {
-         $data = DB::table('servicios')
-                    ->groupBy('folio')
-                    ->get();
-         
+        
+        $data = ServiciosModel::orderBy('id', 'desc')
+        ->groupBy('folio')
+        ->get();
+        
+        
         
         $archivos = DB::table('servicios')
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
