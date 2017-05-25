@@ -36,9 +36,7 @@ class HomeController extends Controller
     public function solicitudes()
     {
         
-        $data = ServiciosModel::orderBy('id', 'desc')
-        ->groupBy('folio')
-        ->having('id', '>', 1)
+        $data = ServiciosModel::groupBy('folio')
         ->get();
         
         
