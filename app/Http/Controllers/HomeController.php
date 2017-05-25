@@ -49,7 +49,9 @@ class HomeController extends Controller
         
      // $last=ServiciosModel::all()->last()->id;
         //$flight = App\ServiciosModel::find(1);
-        $id= $request('id');
+       
+        $id = $request->id;
+        dd( $id );
         
         $servicios = new ServiciosModel();
       $affectedRows = ServiciosModel::where('id', '=', $id)->update(array('estatus' => "AUTORIZADA"));
