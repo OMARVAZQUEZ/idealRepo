@@ -36,8 +36,7 @@ class HomeController extends Controller
     public function solicitudes()
     {
          $data = DB::table('servicios')
-                    ->select('servicios.*')
-                    ->groupBy('servicios.folio')
+                    ->groupBy('folio')
                     ->get();
          
         
