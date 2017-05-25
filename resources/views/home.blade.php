@@ -15,35 +15,35 @@
                              <div class="row">
                                 <div class="col-md-4">
                                     <label for="">IFE</label>
-                                    <input type="file" class="form-control" name="IFE" id="IFE">
+                                    <input type="file" class="form-control" name="IFE" id="IFE" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label for="">IFE REVERSO</label>
-                                    <input type="file" class="form-control" name="IFEREVERSO" id="IFEREVERSO">
+                                    <input type="file" class="form-control" name="IFEREVERSO" id="IFEREVERSO" required>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">CURP</label>
-                                        <input type="file" class="form-control" name="CURP" id="CURP">
+                                        <input type="file" class="form-control" name="CURP" id="CURP" required>
                                     </div>
                                 </div>
                                  <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">COMPROBANTE DE DOMICILIO</label>
-                                        <input type="file" class="form-control" name="COMPROBANTE" id="COMPROBANTE">
+                                        <input type="file" class="form-control" name="COMPROBANTE" id="COMPROBANTE" required>
                                     </div>
                                 </div>
                                 
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">SOLICITUD</label>
-                                        <input type="file" class="form-control" name="SOLICITUD" id="SOLICITUD">
+                                        <input type="file" class="form-control" name="SOLICITUD" id="SOLICITUD" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">AVISO</label>
-                                        <input type="file" class="form-control" name="AVISO" id="AVISO">
+                                        <input type="file" class="form-control" name="AVISO" id="AVISO" required>
                                     </div>
                                 </div>
                                 
@@ -52,7 +52,7 @@
                               <div class="col-md-6">
                                     <div class="form-group">
                                      <label for="">Tipo de servicio</label>
-                                          <select class="form-control" id="tiposervicio" name="tiposervicio">
+                                          <select class="form-control" id="tiposervicio" name="tiposervicio" >
                                                   <option value="DoblePlay">Doble Play</option>
                                                   <option value="Activacion">Activacion</option>
                                                   <option value="Upsel">Upsel</option>

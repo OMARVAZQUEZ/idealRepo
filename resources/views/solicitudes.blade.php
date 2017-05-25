@@ -88,13 +88,13 @@
                                     </td>
 								
                                    
-                                    <td>
-                                      <form  method="POST" action="{{url('update')}}">
-                                        {{ csrf_field() }}
-                                        <input type="hidden" name="id" value="{{ $item->id }}">
-                                      <button type="submit">Activar</button>
-                                      </form>
-                                    </td>
+<!--                                     <td> -->
+<!--                                       <form  method="POST" action="{{url('update')}}"> -->
+<!--                                         {{ csrf_field() }} -->
+<!--                                         <input type="hidden" name="id" value="{{ $item->id }}"> -->
+<!--                                       <button type="submit">Activar</button> -->
+<!--                                       </form> -->
+<!--                                     </td> -->
                                     
                                     
                                 </tr>
