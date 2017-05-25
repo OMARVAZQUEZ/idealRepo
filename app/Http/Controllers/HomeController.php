@@ -36,7 +36,10 @@ class HomeController extends Controller
     public function solicitudes()
     {
         
-        $data = ServiciosModel::groupBy('folio')
+       $data = DB::table('servicios')
+        ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
+        ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
+        ->orderBy('archivos.id')
         ->get();
         
         
