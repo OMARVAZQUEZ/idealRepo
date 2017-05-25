@@ -40,9 +40,14 @@ class HomeController extends Controller
         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
         ->groupBy('folio')
         ->get();
+        $archivos = DB::table('servicios')
+        ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
+        ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
+        ->orderBy('folio')
+        ->get();
         //$data['user']=$user;
         $url="https://s3.amazonaws.com/".env('AWS_BUCKET')."/";
-        return view('solicitudes')->with('data', $data)->with('url', $url);
+        return view('solicitudes')->with('data', $data)->with('url', $url)->with('archivos', $archivos);
         
     }
     public function update(request $request)

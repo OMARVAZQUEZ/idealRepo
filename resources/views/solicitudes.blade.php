@@ -60,6 +60,48 @@
                             
                             </tbody>
                         </table>
+                         <table class="table table-hover">
+                            <thead>
+                            <tr>
+                            	<th>Servicio</th>
+                            	<th>Tipo</th>
+                            	<th>Folio</th>
+                            	<th>Ver</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                           
+                             @foreach($archivos  as $item)
+                                <tr>
+    								<td>
+                                     {{$item->servicio}}
+                                    </td>
+                                    <td>
+                                      {{$item->tipo}}
+                                    </td>
+                                     <td>
+                                      {{$item->folio}}
+                                    </td>
+                                    <td>
+                                        <a href="{{$url}}{{$item->url}}"> <i class=" fa fa-download"> Descargar</i>
+                                        </a>
+                                    </td>
+								
+                                   
+                                    <td>
+                                      <form  method="POST" action="{{url('update')}}">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="id" value="{{ $item->id }}">
+                                      <button type="submit">Activar</button>
+                                      </form>
+                                    </td>
+                                    
+                                    
+                                </tr>
+                            @endforeach
+                            
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
