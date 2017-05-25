@@ -46,6 +46,7 @@ class HomeController extends Controller
         ->orderBy('folio')
         ->get();
         //$data['user']=$user;
+        
         $url="https://s3.amazonaws.com/".env('AWS_BUCKET')."/";
         return view('solicitudes')->with('data', $data)->with('url', $url)->with('archivos', $archivos);
         
