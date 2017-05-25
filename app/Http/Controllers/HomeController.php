@@ -8,7 +8,7 @@ use App\Models\ServiciosModel;
 use App\User;
 use App\Models;
 use DB;
-use Flash;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
@@ -57,8 +57,8 @@ class HomeController extends Controller
         $servicios = new ServiciosModel();
       $affectedRows = ServiciosModel::where('id', '=', $id)->update(array('estatus' => "AUTORIZADA"));
            
-     
-       Flash::success("Se ha registrado la solicitud de manera exitosa!");
+      return redirect('solicitudes')->with('key', 'You have done successfully');
+      
         
         
 //         $user = DB::table('servicios') ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
@@ -66,7 +66,7 @@ class HomeController extends Controller
 //         $servicios->estatus = 'AUTORIZADA';
 //         $servicios->save();
         
-        return redirect('solicitudes');
+        
         //return view('solicitudes')->with('data', $data)->with('url', $url);
     
     }
