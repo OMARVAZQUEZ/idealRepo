@@ -46,8 +46,23 @@ class HomeController extends Controller
     }
     public function update(request $request)
     {
-        dd($request->all());
-        return view('solicitudes')->with('data', $data)->with('url', $url);
+        
+     // $last=ServiciosModel::all()->last()->id;
+        //$flight = App\ServiciosModel::find(1);
+        $id= $request('id');
+        
+        $servicios = new ServiciosModel();
+        $affectedRows = ServiciosModel::where('id', '=', $id)->update(array('estatus' => 'AUTORIZADA'));
+        
+        
+//         $user = DB::table('servicios') ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
+//         ->get();
+//         $servicios->estatus = 'AUTORIZADA';
+        
+//         $servicios->save();
+        
+        return redirect('solicitudes');
+        //return view('solicitudes')->with('data', $data)->with('url', $url);
     
     }
 }
