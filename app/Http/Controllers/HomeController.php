@@ -8,7 +8,6 @@ use App\Models\ServiciosModel;
 use App\User;
 use App\Models;
 use DB;
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
@@ -39,6 +38,7 @@ class HomeController extends Controller
          $data = DB::table('servicios')
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
+        ->groupBy('folio')
         ->get();
         //$data['user']=$user;
         $url="https://s3.amazonaws.com/".env('AWS_BUCKET')."/";
