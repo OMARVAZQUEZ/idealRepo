@@ -38,12 +38,12 @@ class HomeController extends Controller
          $data = DB::table('servicios')
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
-        ->groupBy('folio')
+        ->groupBy('servicios.folio')
         ->get();
         $archivos = DB::table('servicios')
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
-        ->orderBy('folio')
+        ->orderBy('archivos.folio')
         ->get();
         //$data['user']=$user;
         
