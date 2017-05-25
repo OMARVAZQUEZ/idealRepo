@@ -38,6 +38,7 @@ class HomeController extends Controller
         
         $data = ServiciosModel::orderBy('id', 'desc')
         ->groupBy('folio')
+        ->having('id', '>', 1)
         ->get();
         
         
