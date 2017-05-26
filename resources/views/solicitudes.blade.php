@@ -73,13 +73,13 @@
                            
                              @foreach($archivos  as $item)
                                 <tr>
-    								<td>
+    								<td class="table-success">
                                      {{$item->servicio}}
-                                    </td>
-                                    <td>
+                                    </td >
+                                    <td  class="table-warning">
                                       {{$item->tipo}}
                                     </td>
-                                     <td>
+                                     <td class="table-danger">
                                       {{$item->folio}}
                                     </td>
                                     <td>
