@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+
+        <!-- /.container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-2">
+               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Menu</span>
                     <span class="icon-bar"></span>
@@ -26,11 +28,6 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">Carga de Archivos</div>
 
