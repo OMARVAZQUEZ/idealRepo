@@ -47,12 +47,15 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                            	 
                         @else
-                        @if(Auth::user()->id==3||Auth::user()->id==5)<li>
+                        @if(Auth::user()->id==3||Auth::user()->id==5)||Auth::user()->id==4)<li>
                                         <a href="solicitudes">Solicitudes</a>
                                     </li>
                              @endif
                         			 <li>
                                         <a href="/home">Subir Solicitud</a>
+                                    </li>
+                                    <li>
+                                        <a href="misolicitud">Mis Solicitud</a>
                                     </li>
                                      
                             <li class="dropdown">
