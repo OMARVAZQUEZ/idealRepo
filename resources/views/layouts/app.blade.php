@@ -50,7 +50,7 @@
                                         <a href="/home">Subir Solicitud</a>
                                     </li>
                                      <li>
-                                        <a href="solicitudes">Mis Solicitud</a>
+                                        <a href="solicitudes">Solicitudes</a>
                                     </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
