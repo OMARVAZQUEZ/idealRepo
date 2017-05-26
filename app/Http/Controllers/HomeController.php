@@ -40,6 +40,7 @@ class HomeController extends Controller
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
         ->orderBy('archivos.id')
+        ->groupBy('archivos.folio')
         ->get();
         
         
