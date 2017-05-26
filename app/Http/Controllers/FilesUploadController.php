@@ -22,14 +22,11 @@ class FilesUploadController extends Controller
      */
     public function index()
     {
-//         $data = DB::table('servicios')
-//         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
-//         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
-//         ->get();
-//         //$data['user']=$user;
-//         $url="https://s3.amazonaws.com/".env('AWS_BUCKET')."/";
-//         return view('solicitudes')->with('data', $data)->with('url', $url);
-        
+        $data = DB::table('servicios')
+        ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
+        ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
+        ->get();
+   
         
         
         $user = DB::table('servicios')
