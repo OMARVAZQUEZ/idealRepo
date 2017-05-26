@@ -8,7 +8,8 @@
                     <div class="panel-heading">Solicitudes Capturadas</div>
 
                     <div class="panel-body">
-                        <table class="table table-hover">
+                    <table class="table table-responsive-hover">
+                        
                             <thead>
                             <tr>
                             	<th>Servicio</th>
@@ -60,6 +61,7 @@
                             
                             </tbody>
                         </table>
+                        
                          <table class="table table-hover">
                             <thead>
                             <tr>
