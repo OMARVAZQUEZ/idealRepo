@@ -83,11 +83,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="">Mision</a>
-                    <a href="">Vision</a>
-                    <a href="">Noticias</a>
-                    <a href="">Contactanos</a>
-                    <a href="">Bolsa de Trabajo</a>
+                    <a href="">Responsabilidad</a>
+                    <a href="">Trabajo en equipo</a>
+                    <a href="">Honestidad</a>
+                    <a href="">Puntualidad</a>
+                    <a href="">Calidad</a>
                 </div>
             </div>
         </div>
