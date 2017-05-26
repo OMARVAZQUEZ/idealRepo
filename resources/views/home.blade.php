@@ -2,32 +2,9 @@
 
 @section('content')
 
-        <!-- /.container -->
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-md-offset-2">
-               <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Menu</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Ideal</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Subir Solicitud</a>
-                    </li>
-                    <li>
-                        <a href="#">Servicios Capturados</a>
-                    </li>
-                    
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
                 <div class="panel panel-default">
                     <div class="panel-heading">Carga de Archivos</div>
 

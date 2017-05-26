@@ -63,6 +63,13 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+                                    <li>
+                                        <a href="/home">Subir Solicitud</a>
+                                    </li>
+                                     <li>
+                                        <a href="solicitudes">Mis Solicitud</a>
+                                    </li>
+                                   
                                 </ul>
                             </li>
                         @endif
