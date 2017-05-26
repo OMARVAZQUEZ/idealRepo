@@ -9,7 +9,7 @@
 
                     <div class="panel-body">
                     <div class="table-responsive">
-                    <table class="table-hover">
+                    <table class="table">
                         
                             <thead>
                             <tr>
