@@ -50,7 +50,14 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
+                                <ul class="dropdown-menu" role="menu">
+									 <li>
+                                        <a href="/home">Subir Solicitud</a>
+                                    </li>
+                                     <li>
+                                        <a href="solicitudes">Mis Solicitud</a>
+                                    </li>
+                                    </ul>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                         <a href="{{ route('logout') }}"
@@ -63,12 +70,7 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    <li>
-                                        <a href="/home">Subir Solicitud</a>
-                                    </li>
-                                     <li>
-                                        <a href="solicitudes">Mis Solicitud</a>
-                                    </li>
+                                   
                                    
                                 </ul>
                             </li>
