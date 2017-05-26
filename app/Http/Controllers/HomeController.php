@@ -37,6 +37,7 @@ class HomeController extends Controller
     {
         
        $data = DB::table('servicios')
+       ->orderBy('servicios.id')
        ->groupBy('servicios.folio')
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
