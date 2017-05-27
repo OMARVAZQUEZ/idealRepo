@@ -47,7 +47,7 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                            	 
                         @else
-                        @if(Auth::user()->id==3||Auth::user()->id==5)||Auth::user()->id==4)<li>
+                        @if(Auth::user()->id==('3','4','5')<li>
                                         <a href="solicitudes">Solicitudes</a>
                                     </li>
                              @endif
