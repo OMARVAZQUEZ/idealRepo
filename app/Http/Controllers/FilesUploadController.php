@@ -87,7 +87,14 @@ class FilesUploadController extends Controller
             //guardar datos
             
             $last=ServiciosModel::all()->last()->id;
+            if($last!=0){
             $folio =$last+1;
+            }
+            else {
+                  $folio==1;  
+                }
+            
+            }
             $archivos->url = $destino;
             $archivos->tipo=$name;
             $archivos->user_id = Auth::user()->id;
