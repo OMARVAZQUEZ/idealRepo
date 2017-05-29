@@ -33,9 +33,36 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    
+    
+    
+    
     public function misarchivos()
     {
-        return view('user');
+        $user_id = Auth::user()->id;
+        $data = DB::table('servicios')
+        ->orderBy('servicios.id','asc')
+        ->groupBy('servicios.folio')
+        ->where('user_id' ,'=',$user_id )
+        ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
+        ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
+        ->get();
+        
+        
+        
+        $archivos = DB::table('servicios')
+        ->where('user_id' ,'=',$user_id )
+        ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
+        ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
+        ->orderBy('archivos.id')
+        ->get();
+        //$data['user']=$user;
+    
+        
+        $url="https://s3.amazonaws.com/".env('AWS_BUCKET')."/";
+        return view('user')->with('data', $data)->with('url', $url)->with('archivos', $archivos);
+        
+        
     }
     public function solicitudes()
     {

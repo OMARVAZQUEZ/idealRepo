@@ -18,10 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('misolicitud', 'FilesUploadController');
-
+Route::get('misolicitud', 'HomeController@misarchivos');
 Route::resource('filesUpload','FilesUploadController');
-
 Route::get('solicitudes', 'HomeController@solicitudes');
-
 Route::post('update','HomeController@update') ;
