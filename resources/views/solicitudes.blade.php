@@ -13,6 +13,7 @@
                         
                             <thead>
                             <tr>
+                            	<th>Nombre Usuario</th>
                             	<th>Servicio</th>
                             	<th>Contrato</th>
                             	<th>Linea</th>
@@ -25,6 +26,9 @@
                            
                              @foreach($data  as $item)
                                 <tr>
+                                <td>
+                                     {{$item->name}}
+                                    </td>
     								<td>
                                      {{$item->servicio}}
                                     </td>
