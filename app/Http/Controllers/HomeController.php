@@ -33,6 +33,10 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function misarchivos()
+    {
+        return view('user');
+    }
     public function solicitudes()
     {
         
