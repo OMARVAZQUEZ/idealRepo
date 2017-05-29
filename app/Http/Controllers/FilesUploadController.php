@@ -86,7 +86,7 @@ class FilesUploadController extends Controller
             
             //guardar datos
             
-            $last=0;
+            $last==0;
             if($last!=0){
             $folio =1;
             }
