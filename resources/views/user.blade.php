@@ -55,7 +55,8 @@
                                         {{$item->tipo}}
                                     </td>
                                     <td>
-                                        <a href="{{$url}}{{$item->url}}"> <i class=" fa fa-download"> Descargar</i>
+                                     <a href="{{$url}}{{$item->url}}"> <i class=" fa fa-download"> Ver</i>
+                                       
                                         </a>
                                     </td>
 								
