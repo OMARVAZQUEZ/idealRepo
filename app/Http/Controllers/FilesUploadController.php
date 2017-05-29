@@ -88,12 +88,13 @@ class FilesUploadController extends Controller
             
             $last= 0;
             if($last==0){
-           
-            $last=ServiciosModel::all()->last()->id;
-            $folio=$last+1;
+                $folio =1;
+            
             }
             else {
-                $folio =1;
+                $last=ServiciosModel::all()->last()->id;
+                $folio=$last+1;
+               
                 }
             
             
