@@ -43,7 +43,7 @@ class HomeController extends Controller
         $data = DB::table('servicios')
         ->orderBy('servicios.id','asc')
         ->groupBy('servicios.folio')
-        ->where('user_id' ,'=',$user_id )
+        ->where('servicios.user_id' ,'=',$user_id )
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
         ->get();
@@ -51,14 +51,12 @@ class HomeController extends Controller
         
         
         $archivos = DB::table('servicios')
-        ->where('user_id' ,'=',$user_id )
+        ->where('servicios.user_id' ,'=',$user_id )
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
         ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
         ->orderBy('archivos.id')
         ->get();
         //$data['user']=$user;
-    
-        
         $url="https://s3.amazonaws.com/".env('AWS_BUCKET')."/";
         return view('user')->with('data', $data)->with('url', $url)->with('archivos', $archivos);
         
@@ -71,7 +69,8 @@ class HomeController extends Controller
        ->orderBy('servicios.id','asc')
        ->groupBy('servicios.folio')
         ->join('archivos', 'servicios.folio', '=', 'archivos.folio')
-        ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*')
+        ->join('users', 'servicios.user_id', '=', 'users.id')
+        ->select('archivos.created_at','archivos.tipo','archivos.url', 'servicios.*','users.name')
         ->get();
         
         
