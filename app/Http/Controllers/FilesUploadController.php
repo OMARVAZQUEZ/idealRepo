@@ -94,15 +94,17 @@ class FilesUploadController extends Controller
                   $folio==1;  
                 }
             
-            }
+            
             $archivos->url = $destino;
             $archivos->tipo=$name;
             $archivos->user_id = Auth::user()->id;
             $archivos->folio= ('F/'.$folio);
             $archivos->save();
         }
+        }
         
-    }
+    
+
     public function servicioDatos($name,$request){
         $servicios = new ServiciosModel();
         $last=ServiciosModel::all()->last()->id;
