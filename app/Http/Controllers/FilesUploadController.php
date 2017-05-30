@@ -88,21 +88,8 @@ class FilesUploadController extends Controller
             
             $last=ServiciosModel::all()->last()->id;
             
-            $data = DB::table('servicios')
-            ->orderBy('servicios.id','asc')
-            ->select('id')
-            ->get();
-            dd($data);
-            dd(ServiciosModel::all()->last()->id);
-            if($last==0){
-                $folio =1;
-            
-            }
-            else {
-                $last=ServiciosModel::all()->last()->id;
                 $folio=$last+1;
-               
-                }
+              
             
             
             $archivos->url = $destino;
@@ -117,16 +104,10 @@ class FilesUploadController extends Controller
 
     public function servicioDatos($name,$request){
         $servicios = new ServiciosModel();
-        $last= 0;
-        if($last==0){
-            $folio =1;
-        
-        }
-        else {
+       
             $last=ServiciosModel::all()->last()->id;
-            $folio=$last+1;
-             
-        }
+            
+                $folio=$last+1;
         $fecha =Carbon::now()->format('d');
         
         
