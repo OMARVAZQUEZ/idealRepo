@@ -87,7 +87,13 @@ class FilesUploadController extends Controller
             //guardar datos
             
             $last=ServiciosModel::all()->last()->id;
-            dd($last);
+            
+            $data = DB::table('servicios')
+            ->orderBy('servicios.id','asc')
+            ->select('id')
+            ->get();
+            dd($data);
+            dd(ServiciosModel::all()->last()->id);
             if($last==0){
                 $folio =1;
             
