@@ -86,7 +86,8 @@ class FilesUploadController extends Controller
             
             //guardar datos
             
-            $last= 0;
+            $last=ServiciosModel::all()->last()->id;
+            dd($last);
             if($last==0){
                 $folio =1;
             
@@ -125,8 +126,8 @@ class FilesUploadController extends Controller
         
         $servicio = $request->input('tiposervicio');
         $contrato = $request->input('contrato');
-        $linea = $request->input('linea');
-        $paquete = $request->input('paquete');
+        $linea    = $request->input('linea');
+        $paquete  = $request->input('paquete');
         
         
         $servicios->servicio=$servicio;
